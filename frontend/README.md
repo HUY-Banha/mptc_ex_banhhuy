@@ -14,7 +14,7 @@ dart_frog dev
 ```  
 Noted that if you are run front end with real device please define the ip and run e.g  
 ```bash
-dart_frog dev --hostname 192.168.187.78
+dart_frog dev --hostname 192.168.170.212
 ```
 
 4.  Start with front end

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mptc_exercise_banhahuy/core/services/navigation/navigation_service.dart';
+import 'package:mptc_exercise_banhahuy/feature/camera_annotation/presentation/page/camera_annotation_page.dart';
 import 'package:mptc_exercise_banhahuy/feature/profile/data/model/profile.dart';
 import 'package:mptc_exercise_banhahuy/feature/home/presentation/page/home_page.dart';
 import 'package:mptc_exercise_banhahuy/feature/no_page/presentation/no_page.dart';
@@ -44,10 +45,10 @@ class AppRouter {
                     )),
                     GoRoute(path: '/settings', builder: (context, state) => const SettingsPage()),
           ]),
-      // GoRoute(
-      //   path: '/camera_screen',
-      //   builder: (context, state) => const CameraAnnotationScreen(),
-      // ),
+      GoRoute(
+        path: '/camera_screen',
+        builder: (context, state) => const CameraAnnotationPage(),
+      ),
       
     ],
   );

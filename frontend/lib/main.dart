@@ -2,18 +2,15 @@ import 'dart:developer';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_bloc/flutter_bloc.dart'; // Import flutter_bloc
-import 'package:mptc_exercise_banhahuy/core/blocs/language_cubit.dart'; // Import LanguageCubit
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mptc_exercise_banhahuy/core/blocs/language_cubit.dart';
 import 'package:mptc_exercise_banhahuy/core/injection/injection.dart';
-import 'package:mptc_exercise_banhahuy/core/l10n/l10n.dart'; // Import localization files
+import 'package:mptc_exercise_banhahuy/core/l10n/l10n.dart';
 import 'package:mptc_exercise_banhahuy/core/routing/router.dart';
 import 'package:mptc_exercise_banhahuy/feature/home/domain/usecases/category_usecase.dart';
 import 'package:mptc_exercise_banhahuy/feature/home/presentation/bloc/category/category_bloc.dart';
 import 'package:mptc_exercise_banhahuy/feature/profile/domain/usecases/profile_usecase.dart';
 import 'package:mptc_exercise_banhahuy/feature/profile/presentation/bloc/profile_bloc.dart';
-import 'package:mptc_exercise_banhahuy/native_bridge.dart';
-// Import HomePage
-
 import 'core/themes/theme.dart';
 
 Future<void> main() async {
