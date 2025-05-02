@@ -18,13 +18,15 @@ class _CameraAnnotationPageState extends State<CameraAnnotationPage> {
   final ImagePicker _picker = ImagePicker();
 
   Future<void> _pickImage(ImageSource source) async {
-    final status = await Permission.photos.request();
-    if (!status.isGranted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Permission denied')),
-      );
-      return;
-    }
+    // final status = 
+    
+    await Permission.storage.request();
+    // if (!status.isGranted) {
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     SnackBar(content: Text('Permission denied')),
+    //   );
+    //   return;
+    // }
 
     final XFile? pickedFile = await _picker.pickImage(source: source);
     if (pickedFile == null) return;
@@ -50,7 +52,8 @@ class _CameraAnnotationPageState extends State<CameraAnnotationPage> {
   Future<void> _saveImage(Uint8List imageBytes) async {
   if (Platform.isAndroid) {
     // Request permissions
-    // var status = await Permission.storage.request();
+    // var status = 
+    await Permission.storage.request();
     // if (!status.isGranted) {
     //   ScaffoldMessenger.of(context).showSnackBar(
     //     const SnackBar(content: Text('Storage permission denied')),
